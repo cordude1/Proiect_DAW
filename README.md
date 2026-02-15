@@ -16,4 +16,10 @@ https://agentieturism.page.gd
 
 Cont admin:
 email: admin@example.com
-parola: admin123
+parolă: admin123
+
+Cont utilizator:
+email: ariela.cordunianu@example.com
+parolă: admin123
+
+
