@@ -227,7 +227,7 @@ try {
 
         $_SESSION['successMessage'] = 'Rezervarea a fost înregistrată. Vei primi confirmare pe email.';
     } catch (Exception $e) {
-        // Nu stricăm rezervarea dacă email-ul eșuează
+        // Nu blocam rezervarea dacă email-ul eșuează
         error_log("Email rezervare eșuat: " . $mail->ErrorInfo);
         $_SESSION['successMessage'] = 'Rezervarea a fost înregistrată, dar confirmarea pe email nu a fost trimisă.';
     }

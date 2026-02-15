@@ -10,7 +10,7 @@
 <?php
 require './DatabaseConnector.php';
 
-// Conexiune (portul 3307 este pus în DSN-ul clasei, cum ai modificat la pasul 1)
+// Conexiune (portul 3307 este pus în DSN-ul clasei)
 $pdo = new DatabaseConnector();
 $pdo = $pdo->connect();
 
@@ -66,15 +66,15 @@ if (!empty($_FILES['file']['tmp_name'])) {
                     ':nume'    => $nume,
                     ':prenume' => $prenume,
                     ':email'   => $email,
-                    // Parolă implicită: email-ul hash-uit; schimbă dacă vrei altă logică
+                    // Parolă implicită: email-ul hash-uit;
                     ':parola'  => password_hash($email, PASSWORD_BCRYPT),
                     ':rol'     => ($rol === 'admin' ? 'admin' : 'user'),
                 ]);
                 $inserted++;
             } catch (Throwable $e) {
-                // Dacă ai UNIQ pe (nume, prenume) și există deja, contorizăm ca "sărit"
+                // Dacă este UNIQ pe (nume, prenume) și există deja, contorizăm ca "sărit"
                 $skipped++;
-                // Dacă vrei să vezi motivul:
+                // Pentru afisarea erorilor, de ex:
                 // echo "<div>Eroare la '$nume $prenume' ($email): ".$e->getMessage()."</div>";
             }
         }

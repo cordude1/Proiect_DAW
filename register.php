@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__.'/bootstrap.php';
-require_once __DIR__ . '/vendor/autoload.php'; // dacă ai PHPMailer și vrei email confirmare mai târziu
+require_once __DIR__ . '/vendor/autoload.php'; // pentru PHPMailer
 
 /* ================== CONFIG CAPTCHA ================== */
 $CAPTCHA_SITE_KEY   = '6LdFi9cqAAAAAFlmadT6-dcwL247TqKHII6RbAoZ';
@@ -201,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && ($_POST["action"] ?? "") === "regis
 
 </div>
 
-<!-- Buton Înapoi – EXACT ca în rezervare.php -->
+<!-- Buton Înapoi-->
 <div class="page-header" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; margin: 0;">
     <a href="javascript:history.back()" class="btn btn-back">
         ← Înapoi

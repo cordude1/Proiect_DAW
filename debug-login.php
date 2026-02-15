@@ -1,7 +1,7 @@
 <?php
 require './DatabaseConnector.php';
 
-// EDIT: pune aici emailul cu care încerci să te loghezi
+// Admin Email pentru testare login
 $testEmail = 'admin@example.com';
 
 $db = new DatabaseConnector();
@@ -22,10 +22,9 @@ echo "User găsit:\n";
 print_r($user);
 
 // Testează verificarea parolei (pune parola pe care o tastezi la login)
-$parolaIntrodusa = 'Test1234!'; // <- parola cu care încerci
+$parolaIntrodusa = 'Test1234!'; //  
 echo "\npassword_verify(): ";
 var_dump(password_verify($parolaIntrodusa, $user['parola']));
 
-// Test „ brut ” (doar ca să vedem dacă ai parolă în clar în DB)
 echo "comparatie directa (NU e pt. productie): ";
 var_dump($parolaIntrodusa === $user['parola']);

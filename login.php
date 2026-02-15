@@ -116,7 +116,7 @@ if (
         <p>Nu ai un cont? <a href="register.php">Înregistrează-te aici!</a></p>
     </div>
 
-    <!-- Buton Înapoi – EXACT ca în rezervare.php -->
+    <!-- Buton Înapoi-->
     <div class="page-header" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000; margin: 0;">
         <a href="javascript:history.back()" class="btn btn-back">
             ← Înapoi

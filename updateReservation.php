@@ -89,7 +89,7 @@ if (isset($_POST['reservation'])) {
     }
 }
 
-/* === UPDATE: câmpuri de contact / detalii rezervare === */
+/* === Câmpuri de contact / detalii rezervare === */
 if (($_POST['action'] ?? '') === 'update-reservation') {
     $idClient = (int)($_POST['id_client'] ?? 0);
     $idPachet = (int)($_POST['id_pachet'] ?? 0);

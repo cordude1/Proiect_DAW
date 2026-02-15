@@ -20,14 +20,14 @@ $isAdmin  = (($_SESSION['rol'] ?? '') === 'admin') || (($_SESSION['role'] ?? '')
 
     <?php if ($isAdmin): ?>
 
-      <!-- 🔵 DASHBOARD TAB -->
+      <!--  DASHBOARD TAB -->
       <li>
         <a href="<?= url('adminDashboard.php') ?>" class="toplink admin-tab">
           Dashboard Administrator
         </a>
       </li>
 
-      <!-- 🟣 DOCUMENTAȚIE TEHNICĂ TAB -->
+      <!--  DOCUMENTAȚIE TEHNICĂ TAB -->
       <li>
         <a href="<?= url('documentatieTehnica.php') ?>" class="toplink doc-tab">
           Documentație Tehnică

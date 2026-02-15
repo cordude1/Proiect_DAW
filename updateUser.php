@@ -45,7 +45,7 @@ if (isset($_POST['user'])) {
     }
 }
 
-/* === UPDATE: doar email + parola === */
+/* === UPDATE:doar email+parola === */
 if (($_POST['action'] ?? '') === 'update-user') {
     $id       = (int)($_POST['id'] ?? 0);
     $email    = trim($_POST['email'] ?? '');
@@ -91,7 +91,7 @@ if ($password!=='') { $params[':parola'] = password_hash($password, PASSWORD_BCR
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Actualizează utilizator</title>
 
-  <!-- stilurile tale -->
+  <!-- stiluri -->
   <link rel="stylesheet" href="admin-ui.css?v=13">
   <style>
     .form-card{max-width:820px;margin:24px auto;background:#fff;padding:24px;border-radius:16px;box-shadow:0 12px 24px rgba(0,0,0,.08)}
