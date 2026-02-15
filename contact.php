@@ -13,8 +13,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 /* ================== CONFIG CAPTCHA ================== */
-$CAPTCHA_SITE_KEY   = '6LdFi9cqAAAAAFlmadT6-dcwL247TqKHII6RbAoZ';
-$CAPTCHA_SECRET_KEY = '6LdFi9cqAAAAACI5GxBI1NVRWph7r3cRayC8wGTY';
+$CAPTCHA_SITE_KEY   = 'YOUR_SITE_KEY';
+$CAPTCHA_SECRET_KEY = 'YOUR_SECRET_KEY';
 
 /* ================== VERIFY CAPTCHA ================== */
 function verifyRecaptcha(string $secret, string $response): bool {
