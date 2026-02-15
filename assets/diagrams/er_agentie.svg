@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1700" height="1300" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+
+<style>
+.entity { fill:#ffffff; stroke:#333; stroke-width:2; }
+.title { fill:#0d6efd; font-weight:bold; font-size:16px; }
+.field { font-size:13px; }
+.rel { stroke:#333; stroke-width:2; }
+</style>
+
+<!-- ================= ENTITATI ================= -->
+
+<!-- USERI -->
+<rect x="50" y="50" width="280" height="200" class="entity"/>
+<text x="70" y="75" class="title">USERI</text>
+<text x="70" y="100" class="field">PK id</text>
+<text x="70" y="120" class="field">nume</text>
+<text x="70" y="140" class="field">prenume</text>
+<text x="70" y="160" class="field">email</text>
+<text x="70" y="180" class="field">parola</text>
+<text x="70" y="200" class="field">rol</text>
+
+<!-- CLIENTI -->
+<rect x="450" y="50" width="300" height="230" class="entity"/>
+<text x="470" y="75" class="title">CLIENTI</text>
+<text x="470" y="100" class="field">PK id_client</text>
+<text x="470" y="120" class="field">nume</text>
+<text x="470" y="140" class="field">prenume</text>
+<text x="470" y="160" class="field">email</text>
+<text x="470" y="180" class="field">telefon</text>
+<text x="470" y="200" class="field">adresa_fizica</text>
+<text x="470" y="220" class="field">tip_persoana</text>
+
+<!-- DESTINATII -->
+<rect x="1000" y="50" width="300" height="170" class="entity"/>
+<text x="1020" y="75" class="title">DESTINATII</text>
+<text x="1020" y="100" class="field">PK id_destinatie</text>
+<text x="1020" y="120" class="field">nume</text>
+<text x="1020" y="140" class="field">tara</text>
+<text x="1020" y="160" class="field">descriere</text>
+
+<!-- PACHETE -->
+<rect x="1000" y="300" width="300" height="210" class="entity"/>
+<text x="1020" y="325" class="title">PACHETETURISTICE</text>
+<text x="1020" y="350" class="field">PK id_pachet</text>
+<text x="1020" y="370" class="field">FK id_destinatie</text>
+<text x="1020" y="390" class="field">nume</text>
+<text x="1020" y="410" class="field">pret</text>
+<text x="1020" y="430" class="field">durata</text>
+<text x="1020" y="450" class="field">disponibilitate</text>
+<text x="1020" y="470" class="field">stoc_disponibil</text>
+
+<!-- REZERVARI -->
+<rect x="500" y="450" width="340" height="280" class="entity"/>
+<text x="520" y="475" class="title">REZERVARI</text>
+<text x="520" y="500" class="field">PK id_rezervare</text>
+<text x="520" y="520" class="field">FK id_client</text>
+<text x="520" y="540" class="field">FK id_pachet</text>
+<text x="520" y="560" class="field">data_rezervare</text>
+<text x="520" y="580" class="field">numar_persoane</text>
+<text x="520" y="600" class="field">total</text>
+<text x="520" y="620" class="field">metoda_plata</text>
+<text x="520" y="640" class="field">email</text>
+<text x="520" y="660" class="field">telefon</text>
+
+<!-- PLATI -->
+<rect x="200" y="900" width="300" height="180" class="entity"/>
+<text x="220" y="925" class="title">PLATI</text>
+<text x="220" y="950" class="field">PK id_plata</text>
+<text x="220" y="970" class="field">FK id_rezervare</text>
+<text x="220" y="990" class="field">metoda_plata</text>
+<text x="220" y="1010" class="field">suma</text>
+<text x="220" y="1030" class="field">data_plata</text>
+
+<!-- FACTURI -->
+<rect x="750" y="900" width="320" height="190" class="entity"/>
+<text x="770" y="925" class="title">FACTURI</text>
+<text x="770" y="950" class="field">PK id_factura</text>
+<text x="770" y="970" class="field">FK id_client</text>
+<text x="770" y="990" class="field">FK id_rezervare</text>
+<text x="770" y="1010" class="field">data_factura</text>
+<text x="770" y="1030" class="field">suma_totala</text>
+
+<!-- RECENZII -->
+<rect x="1300" y="600" width="300" height="200" class="entity"/>
+<text x="1320" y="625" class="title">RECENZII</text>
+<text x="1320" y="650" class="field">PK id_recenzie</text>
+<text x="1320" y="670" class="field">FK id_pachet</text>
+<text x="1320" y="690" class="field">FK id_client</text>
+<text x="1320" y="710" class="field">rating</text>
+<text x="1320" y="730" class="field">comentariu</text>
+
+<!-- PROMOTII -->
+<rect x="1300" y="300" width="300" height="180" class="entity"/>
+<text x="1320" y="325" class="title">PROMOTII</text>
+<text x="1320" y="350" class="field">PK id_promotie</text>
+<text x="1320" y="370" class="field">FK id_pachet</text>
+<text x="1320" y="390" class="field">reducere</text>
+
+<!-- ================= RELATII ================= -->
+
+<!-- DESTINATIE 1 --- N PACHETE -->
+<line x1="1150" y1="220" x2="1150" y2="300" class="rel"/>
+<text x="1160" y="260">1</text>
+<text x="1160" y="285">N</text>
+
+<!-- CLIENT 1 --- N REZERVARI -->
+<line x1="600" y1="280" x2="600" y2="450" class="rel"/>
+<text x="610" y="330">1</text>
+<text x="610" y="420">N</text>
+
+<!-- PACHET 1 --- N REZERVARI -->
+<line x1="1000" y1="405" x2="840" y2="550" class="rel"/>
+<text x="920" y="450">1</text>
+<text x="880" y="520">N</text>
+
+<!-- REZERVARE 1 --- N PLATI -->
+<line x1="550" y1="730" x2="350" y2="900" class="rel"/>
+<text x="500" y="820">1</text>
+<text x="390" y="860">N</text>
+
+<!-- REZERVARE 1 --- 1 FACTURA -->
+<line x1="670" y1="730" x2="910" y2="900" class="rel"/>
+<text x="720" y="820">1</text>
+<text x="880" y="860">1</text>
+
+<!-- PACHET 1 --- N RECENZII -->
+<line x1="1300" y1="690" x2="1300" y2="405" class="rel"/>
+<text x="1310" y="620">N</text>
+<text x="1310" y="470">1</text>
+
+<!-- PACHET 1 --- N PROMOTII -->
+<line x1="1150" y1="300" x2="1450" y2="390" class="rel"/>
+<text x="1280" y="330">1</text>
+<text x="1400" y="360">N</text>
+
+</svg>

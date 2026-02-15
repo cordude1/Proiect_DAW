@@ -1,0 +1,55 @@
+/* ===== Floating Back Button (FAB) ===== */
+
+.back-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #6c757d;
+  color: #fff;
+
+  text-decoration: none;
+
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+  transition: all .2s ease;
+
+  z-index: 9999;
+}
+
+/* Hover */
+.back-fab:hover {
+  background: #5a6268;
+  transform: translateY(-3px);
+}
+
+/* Click */
+.back-fab:active {
+  transform: scale(0.95);
+}
+
+/* Icon */
+.back-fab__icon {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .back-fab {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,248 @@
+/* ============================= */
+/* ========= BAZĂ ============== */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+}
+
+/* ============================= */
+/* ========= HEADER ============ */
+/* ============================= */
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  background: #fff;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* ============================= */
+/* ========= ALERTE ============ */
+/* ============================= */
+
+.alert {
+  margin: 12px 0 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.alert-success {
+  background: #eafaf0;
+  border: 1px solid #2ecc71;
+  color: #19692c;
+}
+
+.alert-error {
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  color: #8a1f11;
+}
+
+/* ============================= */
+/* ========= TABEL ============= */
+/* ============================= */
+
+.user-list-section {
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-table thead th {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px;
+  text-align: left;
+
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.user-table tbody td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.user-table .center {
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  padding: 24px;
+}
+
+/* ============================= */
+/* ========= BUTOANE =========== */
+/* ============================= */
+
+a.btn,
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+button.btn,
+input[type=submit].btn {
+  appearance: none;
+  border: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  transition: transform .06s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Culori butoane */
+
+.btn-add {
+  background: #28a745;
+  color: #fff !important;
+}
+
+.btn-edit {
+  background: #ffc107;
+  color: #212529 !important;
+}
+
+.btn-delete {
+  background: #f28b82;
+  color: #fff !important;
+}
+
+.btn-back {
+  background: #6c757d;
+  color: #fff !important;
+}
+
+/* ============================= */
+/* ========= ACTIONS =========== */
+/* ============================= */
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline {
+  display: inline;
+}
+
+/* ============================= */
+/* ========= TAB NAV =========== */
+/* ============================= */
+
+.admin-tab {
+  background: #0d6efd;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+}
+
+.admin-tab:hover {
+  background: #0b5ed7;
+}
+
+.doc-tab {
+  background: #6f42c1;
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+}
+
+.doc-tab:hover {
+  background: #5936a2;
+}
+
+/* ============================= */
+/* ========= RESPONSIVE ======== */
+/* ============================= */
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

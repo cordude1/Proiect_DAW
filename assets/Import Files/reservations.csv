@@ -1,0 +1,3 @@
+﻿id_client,id_pachet,email,nume,prenume,telefon,numar_persoane,adresa,judet,localitate,metoda_plata
+2,1,maria.ionescu@example.com,Ionescu,Maria,722333444,3,Str. Mihai Viteazu 15,Cluj,Cluj-Napoca,plata_sediu
+3,2,andrei.georgescu@example.com,Georgescu,Andrei,733444555,1,Str. Revolutiei 7,Timis,Timisoara,paypal

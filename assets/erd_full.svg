@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="950" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+
+<style>
+.entity { fill:#f8f9fa; stroke:#0d6efd; stroke-width:2; }
+.title { font-weight:bold; font-size:16px; fill:#0d6efd; }
+.attr { font-size:13px; fill:#333; }
+.line { stroke:#444; stroke-width:1.5; }
+</style>
+
+<!-- ================= DESTINATII ================= -->
+<rect x="40" y="40" width="260" height="120" class="entity"/>
+<text x="60" y="65" class="title">destinatii</text>
+<text x="60" y="90" class="attr">PK id_destinatie</text>
+<text x="60" y="110" class="attr">nume</text>
+<text x="60" y="130" class="attr">tara</text>
+
+<!-- ================= PACHETE ================= -->
+<rect x="420" y="40" width="300" height="160" class="entity"/>
+<text x="440" y="65" class="title">pacheteturistice</text>
+<text x="440" y="90" class="attr">PK id_pachet</text>
+<text x="440" y="110" class="attr">FK id_destinatie</text>
+<text x="440" y="130" class="attr">nume</text>
+<text x="440" y="150" class="attr">pret</text>
+<text x="440" y="170" class="attr">durata</text>
+
+<!-- ================= CLIENTI ================= -->
+<rect x="40" y="300" width="300" height="200" class="entity"/>
+<text x="60" y="325" class="title">clienti</text>
+<text x="60" y="350" class="attr">PK id_client</text>
+<text x="60" y="370" class="attr">nume</text>
+<text x="60" y="390" class="attr">prenume</text>
+<text x="60" y="410" class="attr">email</text>
+<text x="60" y="430" class="attr">telefon</text>
+
+<!-- ================= REZERVARI ================= -->
+<rect x="420" y="300" width="340" height="220" class="entity"/>
+<text x="440" y="325" class="title">rezervari</text>
+<text x="440" y="350" class="attr">PK id_rezervare</text>
+<text x="440" y="370" class="attr">FK id_client</text>
+<text x="440" y="390" class="attr">FK id_pachet</text>
+<text x="440" y="410" class="attr">data_rezervare</text>
+<text x="440" y="430" class="attr">numar_persoane</text>
+<text x="440" y="450" class="attr">total</text>
+
+<!-- ================= PLATI ================= -->
+<rect x="900" y="300" width="280" height="160" class="entity"/>
+<text x="920" y="325" class="title">plati</text>
+<text x="920" y="350" class="attr">PK id_plata</text>
+<text x="920" y="370" class="attr">FK id_rezervare</text>
+<text x="920" y="390" class="attr">metoda_plata</text>
+<text x="920" y="410" class="attr">suma</text>
+
+<!-- ================= FACTURI ================= -->
+<rect x="900" y="520" width="280" height="160" class="entity"/>
+<text x="920" y="545" class="title">facturi</text>
+<text x="920" y="570" class="attr">PK id_factura</text>
+<text x="920" y="590" class="attr">FK id_rezervare</text>
+<text x="920" y="610" class="attr">FK id_client</text>
+<text x="920" y="630" class="attr">suma_totala</text>
+
+<!-- ================= USERI ================= -->
+<rect x="1300" y="40" width="250" height="160" class="entity"/>
+<text x="1320" y="65" class="title">useri</text>
+<text x="1320" y="90" class="attr">PK id</text>
+<text x="1320" y="110" class="attr">nume</text>
+<text x="1320" y="130" class="attr">prenume</text>
+<text x="1320" y="150" class="attr">email</text>
+<text x="1320" y="170" class="attr">rol</text>
+
+<!-- ================= LINES ================= -->
+
+<!-- destinatii -> pachete -->
+<line x1="300" y1="90" x2="420" y2="90" class="line"/>
+
+<!-- clienti -> rezervari -->
+<line x1="340" y1="380" x2="420" y2="380" class="line"/>
+
+<!-- pachete -> rezervari -->
+<line x1="570" y1="200" x2="570" y2="300" class="line"/>
+
+<!-- rezervari -> plati -->
+<line x1="760" y1="380" x2="900" y2="380" class="line"/>
+
+<!-- rezervari -> facturi -->
+<line x1="760" y1="440" x2="900" y2="600" class="line"/>
+
+</svg>
